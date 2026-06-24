@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Fabric temporary files
+*.tmp
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.*
+
+# Notebook outputs
+*.html
+
+# Build artifacts
+dist/
+build/

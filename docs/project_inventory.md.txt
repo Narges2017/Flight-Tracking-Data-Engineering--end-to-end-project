@@ -1,0 +1,11 @@
+# Flight Tracking Analytics
+
+## Components
+
+- Dataflow Gen2
+- Lakehouse
+- Notebook: fact_and_dimension_tables
+- Pipeline
+- Pipeline_1
+- Semantic Model: flight tracking model
+- Report: flights_report

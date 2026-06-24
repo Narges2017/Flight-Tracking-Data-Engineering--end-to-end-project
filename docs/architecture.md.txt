@@ -1,0 +1,56 @@
+# Architecture
+
+## Overview
+
+This project implements an end-to-end Flight Tracking Data Engineering solution using Microsoft Fabric.
+
+## Architecture Flow
+
+```text
+Flight Data Source
+        │
+        ▼
+Dataflow Gen2
+(Extract & Transform)
+        │
+        ▼
+Lakehouse
+(Cleaned Flights)
+        │
+        ▼
+PySpark Notebook
+(Fact & Dimension Tables)
+        │
+        ▼
+Semantic Model
+        │
+        ▼
+Power BI Dashboard
+```
+
+## Components
+
+### Dataflow Gen2
+
+* Extracts flight data.
+* Performs data cleansing and transformation.
+* Loads data into the Lakehouse.
+
+### Lakehouse
+
+* Stores cleaned flight data.
+* Serves as the central storage layer.
+
+### Notebook
+
+* Creates dimension tables.
+* Creates the fact table.
+* Implements the Star Schema model.
+
+### Semantic Model
+
+* Defines relationships between fact and dimension tables.
+
+### Power BI Report
+
+* Provides business insights and visual analytics.

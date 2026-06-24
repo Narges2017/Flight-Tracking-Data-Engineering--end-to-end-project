@@ -1,0 +1,75 @@
+# Data Model
+
+## Star Schema
+
+### Fact Table
+
+#### Fact_Flights
+
+| Column                |
+| --------------------- |
+| flight_id             |
+| date_key              |
+| airline_key           |
+| departure_airport_key |
+| arrival_airport_key   |
+| flight_status         |
+| flight_number         |
+| flight_iata           |
+| duration              |
+| hour                  |
+| time_bucketing        |
+| flight_type           |
+
+---
+
+### Dimension Tables
+
+#### Dim_Airline
+
+| Column       |
+| ------------ |
+| airline_key  |
+| airline_iata |
+| airline_name |
+
+#### Dim_Airports
+
+| Column           |
+| ---------------- |
+| airport_key      |
+| airport_iata     |
+| airport_name     |
+| airport_timezone |
+
+#### Dim_Date
+
+| Column       |
+| ------------ |
+| date_key     |
+| full_date    |
+| year         |
+| month        |
+| month_name   |
+| day_of_month |
+| day_name     |
+| week_of_year |
+
+---
+
+## Relationships
+
+```text
+dim_airline
+      │
+      ▼
+fact_flights
+      ▲
+      │
+dim_airports
+
+dim_date
+      │
+      ▼
+fact_flights
+```
